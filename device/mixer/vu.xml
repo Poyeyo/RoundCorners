@@ -8,8 +8,7 @@
     -->
     <WidgetGroup>
         <Layout>vertical</Layout>
-        <!--<Size>68f,165f</Size>-->
-        <Size>68f,me</Size>
+        <Size>68f,165f</Size>
         <Children>
 
             <WidgetGroup><!-- spacer -->
@@ -80,38 +79,41 @@
                                 <Size>68f,me</Size>
                                 <Children>
 
-                                    <VuMeter>
-                                        <!-- <SizePolicy>min,max</SizePolicy> -->
-                                        <Size>68f,me</Size>
-                                        <TooltipId>channel_VuMeterL</TooltipId>
-                                        <PathVu>background/bg_1_vu_left_on.svg</PathVu>
-                                        <Horizontal>false</Horizontal>
-                                        <PeakHoldSize>4</PeakHoldSize>
-                                        <PeakHoldTime>500</PeakHoldTime>
-                                        <PeakFallTime>50</PeakFallTime>
-                                        <PeakFallStep>2</PeakFallStep>
-                                        <Connection>
-                                            <ConfigKey><Variable name="Group"/>,VuMeterL</ConfigKey>
-                                        </Connection>
-                                    </VuMeter>
+                                        <VuMeter>
+                                            <!-- <SizePolicy>min,max</SizePolicy> -->
+                                            <Size>5f,me</Size>
+                                            <TooltipId>channel_VuMeterL</TooltipId>                                            <PathBack scalemode="STRETCH">background/bg_1_vu_left_off.png</PathBack><PathVu>background/bg_1_vu_left_on.png</PathVu>
+                                            <Horizontal>false</Horizontal>
+                                            <PeakHoldSize>4</PeakHoldSize>
+                                            <PeakHoldTime>500</PeakHoldTime>
+                                            <PeakFallTime>50</PeakFallTime>
+                                            <PeakFallStep>2</PeakFallStep>
+                                            <Connection>
+                                                <ConfigKey><Variable name="Group"/>,vu_meter_left</ConfigKey>
+                                            </Connection>
+                                        </VuMeter>
 
-                                    <VuMeter>
-                                        <!-- <SizePolicy>min,max</SizePolicy> -->
-                                        <Size>68f,me</Size>
-                                        <TooltipId>channel_VuMeterR</TooltipId>
-                                        <PathVu>background/bg_1_vu_right_on.svg</PathVu>
-                                        <Horizontal>false</Horizontal>
-                                        <PeakHoldSize>4</PeakHoldSize>
-                                        <PeakHoldTime>500</PeakHoldTime>
-                                        <PeakFallTime>50</PeakFallTime>
-                                        <PeakFallStep>2</PeakFallStep>
-                                        <Connection>
-                                            <ConfigKey><Variable name="Group"/>,VuMeterR</ConfigKey>
-                                        </Connection>
-                                    </VuMeter>
+                                        <WidgetGroup>
+                                            <MinimumSize>6,-1</MinimumSize>
+                                            <MaximumSize>6,-1</MaximumSize>
+                                        </WidgetGroup>
 
-                                </Children>
-                            </WidgetGroup>
+                                        <VuMeter>
+                                            <!-- <SizePolicy>min,max</SizePolicy> -->
+                                            <Size>5f,me</Size>
+                                            <TooltipId>channel_VuMeterR</TooltipId>                                            <PathBack scalemode="STRETCH">background/bg_1_vu_right_off.png</PathBack><PathVu>background/bg_1_vu_right_on.png</PathVu>
+                                            <Horizontal>false</Horizontal>
+                                            <PeakHoldSize>4</PeakHoldSize>
+                                            <PeakHoldTime>500</PeakHoldTime>
+                                            <PeakFallTime>50</PeakFallTime>
+                                            <PeakFallStep>2</PeakFallStep>
+                                            <Connection>
+                                                <ConfigKey><Variable name="Group"/>,vu_meter_right</ConfigKey>
+                                            </Connection>
+                                        </VuMeter>
+
+                                    </Children>
+                                </WidgetGroup>
         
                             <WidgetGroup>
                                 <ObjectName>VuBottom</ObjectName>
@@ -164,31 +166,34 @@
 
                                     <VuMeter>
                                         <!-- <SizePolicy>min,max</SizePolicy> -->
-                                        <Size>68f,me</Size>
-                                        <TooltipId>channel_VuMeterL</TooltipId>
-                                        <PathVu>background/bg_1_vu_left_on.svg</PathVu>
+                                        <Size>5f,me</Size>
+                                        <TooltipId>channel_VuMeterL</TooltipId>                                        <PathBack scalemode="STRETCH">background/bg_1_vu_left_off.png</PathBack><PathVu>background/bg_1_vu_left_on.png</PathVu>
                                         <Horizontal>false</Horizontal>
                                         <PeakHoldSize>4</PeakHoldSize>
                                         <PeakHoldTime>500</PeakHoldTime>
                                         <PeakFallTime>50</PeakFallTime>
                                         <PeakFallStep>2</PeakFallStep>
                                         <Connection>
-                                            <ConfigKey><Variable name="Group"/>,VuMeterL</ConfigKey>
+                                            <ConfigKey><Variable name="Group"/>,vu_meter_left</ConfigKey>
                                         </Connection>
                                     </VuMeter>
 
+                                    <WidgetGroup>
+                                        <MinimumSize>6,-1</MinimumSize>
+                                        <MaximumSize>6,-1</MaximumSize>
+                                    </WidgetGroup>
+
                                     <VuMeter>
                                         <!-- <SizePolicy>min,max</SizePolicy> -->
-                                        <Size>68f,me</Size>
-                                        <TooltipId>channel_VuMeterR</TooltipId>
-                                        <PathVu>background/bg_1_vu_right_on.svg</PathVu>
+                                        <Size>5f,me</Size>
+                                        <TooltipId>channel_VuMeterR</TooltipId>                                        <PathBack scalemode="STRETCH">background/bg_1_vu_right_off.png</PathBack><PathVu>background/bg_1_vu_right_on.png</PathVu>
                                         <Horizontal>false</Horizontal>
                                         <PeakHoldSize>4</PeakHoldSize>
                                         <PeakHoldTime>500</PeakHoldTime>
                                         <PeakFallTime>50</PeakFallTime>
                                         <PeakFallStep>2</PeakFallStep>
                                         <Connection>
-                                            <ConfigKey><Variable name="Group"/>,VuMeterR</ConfigKey>
+                                            <ConfigKey><Variable name="Group"/>,vu_meter_right</ConfigKey>
                                         </Connection>
                                     </VuMeter>
 
@@ -246,31 +251,34 @@
 
                                     <VuMeter>
                                         <!-- <SizePolicy>min,max</SizePolicy> -->
-                                        <Size>68f,me</Size>
-                                        <TooltipId>channel_VuMeterL</TooltipId>
-                                        <PathVu>background/bg_1_vu_left_on.svg</PathVu>
+                                        <Size>5f,me</Size>
+                                        <TooltipId>channel_VuMeterL</TooltipId>                                        <PathBack scalemode="STRETCH">background/bg_1_vu_left_off.png</PathBack><PathVu>background/bg_1_vu_left_on.png</PathVu>
                                         <Horizontal>false</Horizontal>
                                         <PeakHoldSize>4</PeakHoldSize>
                                         <PeakHoldTime>500</PeakHoldTime>
                                         <PeakFallTime>50</PeakFallTime>
                                         <PeakFallStep>2</PeakFallStep>
                                         <Connection>
-                                            <ConfigKey><Variable name="Group"/>,VuMeterL</ConfigKey>
+                                            <ConfigKey><Variable name="Group"/>,vu_meter_left</ConfigKey>
                                         </Connection>
                                     </VuMeter>
 
+                                    <WidgetGroup>
+                                        <MinimumSize>6,-1</MinimumSize>
+                                        <MaximumSize>6,-1</MaximumSize>
+                                    </WidgetGroup>
+
                                     <VuMeter>
                                         <!-- <SizePolicy>min,max</SizePolicy> -->
-                                        <Size>68f,me</Size>
-                                        <TooltipId>channel_VuMeterR</TooltipId>
-                                        <PathVu>background/bg_1_vu_right_on.svg</PathVu>
+                                        <Size>5f,me</Size>
+                                        <TooltipId>channel_VuMeterR</TooltipId>                                        <PathBack scalemode="STRETCH">background/bg_1_vu_right_off.png</PathBack><PathVu>background/bg_1_vu_right_on.png</PathVu>
                                         <Horizontal>false</Horizontal>
                                         <PeakHoldSize>4</PeakHoldSize>
                                         <PeakHoldTime>500</PeakHoldTime>
                                         <PeakFallTime>50</PeakFallTime>
                                         <PeakFallStep>2</PeakFallStep>
                                         <Connection>
-                                            <ConfigKey><Variable name="Group"/>,VuMeterR</ConfigKey>
+                                            <ConfigKey><Variable name="Group"/>,vu_meter_right</ConfigKey>
                                         </Connection>
                                     </VuMeter>
 

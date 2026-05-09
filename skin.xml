@@ -4,7 +4,7 @@
     <manifest>
         <title>RoundCorners</title>
         <author>22degrees</author>
-        <version>2.2.3.01</version>
+        <version>2.5.6</version>
         <description>A 4-deck full-featured skin</description>
         <language>en</language>
         <license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
@@ -51,9 +51,9 @@
             <attribute persist="true" config_key="[Deck3],show_pitch">0</attribute>
             <attribute persist="true" config_key="[Deck3],show_bpm">1</attribute>
             <attribute persist="true" config_key="[Deck3],show_transport">1</attribute>
-            <attribute persist="true" config_key="[Deck3],show_hotcue">0</attribute>
+            <attribute persist="true" config_key="[Deck3],show_hotcue">1</attribute>
             <attribute persist="true" config_key="[Deck3],show_advanced_markers">1</attribute>
-            <attribute persist="true" config_key="[Deck3],show_loop">0</attribute>
+            <attribute persist="true" config_key="[Deck3],show_loop">1</attribute>
             <!-- Mixer 2 -->
             <attribute persist="true" config_key="[Mixer2],show_mixer">1</attribute>
             <attribute persist="true" config_key="[Mixer2],show_filter">1</attribute>
@@ -65,9 +65,9 @@
             <attribute persist="true" config_key="[Deck4],show_pitch">0</attribute>
             <attribute persist="true" config_key="[Deck4],show_bpm">1</attribute>
             <attribute persist="true" config_key="[Deck4],show_transport">1</attribute>
-            <attribute persist="true" config_key="[Deck4],show_hotcue">0</attribute>
+            <attribute persist="true" config_key="[Deck4],show_hotcue">1</attribute>
             <attribute persist="true" config_key="[Deck4],show_advanced_markers">1</attribute>
-            <attribute persist="true" config_key="[Deck4],show_loop">0</attribute>
+            <attribute persist="true" config_key="[Deck4],show_loop">1</attribute>
             <!-- VinylControl/Crossfader -->
             <attribute persist="true" config_key="[VinylControl],show_vinylcontrol">0</attribute>
             <!-- Microphone/Aux-->
@@ -90,7 +90,7 @@
             <attribute persist="true" config_key="[Library],show_coverart">0</attribute>
             <!-- Previewdeck -->
             <attribute persist="true" config_key="[Master],num_preview_decks">1</attribute>
-            <attribute persist="true" config_key="[PreviewDeck],show_previewdeck">0</attribute>
+            <attribute persist="true" config_key="[Skin],show_preview_decks">0</attribute>
 
         </attributes>
     </manifest>

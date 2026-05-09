@@ -8,8 +8,8 @@
     -->
     <WidgetGroup>
         <Layout>stacked</Layout>
-        <Size>-1,40</Size>
-        <SizePolicy>e,f</SizePolicy>
+        <MinimumSize>-1,41</MinimumSize>
+        <MaximumSize>-1,41</MaximumSize>
         <Children>
 
             <!-- Hack for BUG https://github.com/22degrees/RoundCorners/issues/4 -->

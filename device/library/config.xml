@@ -31,8 +31,8 @@
                     <Template src="skin:device/library/config_controls.xml">
                         <SetVariable name="Tooltip">Show/hide the Previewdeck.</SetVariable>
                         <SetVariable name="Label">Previewdeck</SetVariable>
-                        <SetVariable name="Group">[PreviewDeck]</SetVariable>
-                        <SetVariable name="Widget">show_previewdeck</SetVariable>
+                        <SetVariable name="Group">[Skin]</SetVariable>
+                        <SetVariable name="Widget">show_preview_decks</SetVariable>
                     </Template>
 
                 </Children>

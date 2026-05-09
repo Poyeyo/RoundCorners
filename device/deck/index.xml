@@ -29,7 +29,7 @@
                     <WidgetGroup>
                         <ObjectName>Rectangle</ObjectName>
                         <Layout>vertical</Layout>
-                        <SizePolicy>me,me</SizePolicy>
+                        <SizePolicy>me,max</SizePolicy>
                         <Children>
 
                             <Template src="skin:device/deck/trackinfo.xml"/>
@@ -45,9 +45,14 @@
 
                     <Template src="skin:device/deck/loop.xml"/>
 
-                    <WidgetGroup><!-- dyn.expander -->
-                        <ObjectName>TransportRow</ObjectName>
+                    <!-- Only when the centre mixer is shown: row height follows the mixer, so this absorbs slack. When the mixer is hidden, the row height matches the decks and this must stay collapsed. -->
+                    <WidgetGroup>
+                        <ObjectName>DeckVerticalFill</ObjectName>
                         <Size>me,me</Size>
+                        <Connection>
+                            <ConfigKey persist="true"><Variable name="MixerWidget"/>,show_mixer</ConfigKey>
+                            <BindProperty>visible</BindProperty>
+                        </Connection>
                     </WidgetGroup>
 
                     <Template src="skin:device/deck/border_bottom.xml"/>

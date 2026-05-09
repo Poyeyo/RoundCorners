@@ -19,7 +19,7 @@
             <WidgetGroup>
                 <ObjectName>Sampler<Variable name="Number"/></ObjectName>
                 <Layout>vertical</Layout>
-                <SizePolicy>me,max</SizePolicy>
+                <SizePolicy>me,f</SizePolicy>
                 <Children>
 
                     <Template src="skin:device/sampler/border_top.xml"/>

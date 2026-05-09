@@ -9,6 +9,11 @@
 
 WWidgetGroup { border: 0; border-radius: 0; margin: 0; padding: 0; background: transparent; color: #333333; }
 
+#VinylControlRow { max-height: 69px; min-height: 69px; }
+#MicrophoneRow { max-height: 124px; min-height: 124px; }
+#SamplerRow { max-height: 229px; }
+
+
 /* CONTEXT MENU
    ========================================================================== */
 
@@ -50,6 +55,8 @@ QToolTip {
 
 #Body { background-color: #000000; font-family: 'Open Sans'; font-weight: normal; }
 #BorderTop { border: 0; border-top-right-radius: 8px; border-top-left-radius: 8px; background-color: #121212; margin: 2px 0 0 0; }
+#PreviewDeck { max-height: 100px; min-height: 60px; }
+#PreviewDeck #BorderTop { margin: 3px 0 0 0; }
 #BorderBottom { border: 0; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; background-color: #121212; margin: 0 0 2px 0; }
 #Rectangle { border: 0; border-radius: 0; background-color: #121212; margin: 0; padding: 0; height: 0; width: 0; }
 #RoundedRectangle { border: 0; border-radius: 8px; background-color: #121212; margin: 2px; padding: 0; height: 0; width: 0; }
@@ -57,11 +64,14 @@ QToolTip {
 /* DEVICE-SETTINGS-BOX
    ========================================================================== */
 
+/* Deck/mixer/sampler/etc. use a stacked layout; hidden overlay pages can still affect
+   minimum height. A large top margin here inflated every stacked deck (and looked like a
+   full-width black band under the decks when the mixer column was hidden). */
 #OuterConfigBox {
     border: 0;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 180);
-    margin: 2px 0 2px 0;
+    margin: 0 0 2px 0;
     padding: 0;
     height: 0;
     width: 0;
@@ -94,25 +104,41 @@ QToolTip {
    ========================================================================== */
 
 WSearchLineEdit {
-    min-height: 32px;
+    min-height: 34px;
+    max-height: 34px;
     padding: 2px 2px 2px 8px;
     border: 0;
     border-radius: 8px;
-    margin: 2px 0 2px 0;
+    margin: 2px 0 7px 0;
     font-size: 13px;
     background-color: #121212;
     color: #c6c6c6;
 }
 
 WSearchLineEdit:focus {
-    min-height: 25px;
+    min-height: 34px;
+    max-height: 34px;
     padding: 2px 2px 2px 8px;
     border: 0;
     border-radius: 8px;
-    margin: 2px 0 2px 0;
+    margin: 2px 0 8px 0;
     font-size: 13px;
     background-color: #181818;
     color: #c6c6c6;
+}
+
+WSearchLineEdit::drop-down {
+    width: 24px;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: transparent;
+}
+
+WSearchLineEdit::down-arrow {
+    width: 10px;
+    height: 10px;
+    image: url(skin:style/arrow_down.svg);
 }
 
 
@@ -920,6 +946,10 @@ QScrollBar::sub-page:vertical {
 }
 
 #Row {
+    qproperty-layoutAlignment: 'AlignCenter | AlignTop';
+}
+
+#DeckMixerRow {
     qproperty-layoutAlignment: 'AlignCenter | AlignTop';
 }
 
@@ -2237,7 +2267,8 @@ QScrollBar::sub-page:vertical {
 #TransportRow,
 #HotCueRow,
 #LoopRow,
-#BeatGridRow {
+#BeatGridRow,
+#DeckVerticalFill {
     border: 0;
     border-radius: 0;
     background-color: #121212;

@@ -7,7 +7,7 @@
     **************************************************************************************
     -->
     <WidgetGroup>
-        <ObjectName>Row</ObjectName>
+        <ObjectName>SamplerRow</ObjectName>
         <Layout>horizontal</Layout>
         <SizePolicy>me,max</SizePolicy>
         <Children>

@@ -8,9 +8,8 @@
     -->
     <WidgetGroup>
         <Layout>stacked</Layout>
-        <SizePolicy>f,me</SizePolicy>
-        <MinimumSize>272,-1</MinimumSize>
-        <MaximumSize>272,-1</MaximumSize>
+        <MinimumSize>272,69</MinimumSize>
+        <MaximumSize>272,69</MaximumSize>
         <Children>
 
             <!-- Hack for BUG https://github.com/22degrees/RoundCorners/issues/4 -->
@@ -21,9 +20,8 @@
             <WidgetGroup>
                 <ObjectName>Crossfader</ObjectName>
                 <Layout>vertical</Layout>
-                <SizePolicy>f,me</SizePolicy>
-                <MinimumSize>272,-1</MinimumSize>
-                <MaximumSize>272,-1</MaximumSize>
+                <MinimumSize>272,69</MinimumSize>
+                <MaximumSize>272,69</MaximumSize>
                 <Children>
 
                     <Template src="skin:device/crossfader/border_top.xml"/>

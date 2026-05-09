@@ -30,7 +30,7 @@ A 4-deck full-featured and resizable skin for [MIXXX](https://github.com/mixxxdj
 2. Download & unzip "RoundCorners-master.zip" and copy the whole unzipped folder to the corresponding path:
 
 #### Linux
-/usr/share/mixxx/skins/
+~/.mixxx/skins/
 
 Note that you may get permission error while copying,
 make sure you have root privileges

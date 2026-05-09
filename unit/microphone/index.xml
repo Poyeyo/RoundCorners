@@ -7,9 +7,9 @@
     **************************************************************************************
     -->
     <WidgetGroup>
-        <ObjectName>Row</ObjectName>
+        <ObjectName>MicrophoneRow</ObjectName>
         <Layout>horizontal</Layout>
-        <SizePolicy>me,max</SizePolicy>
+        <SizePolicy>me,f</SizePolicy>
         <Children>
 
             <SizeAwareStack>

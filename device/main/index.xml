@@ -29,8 +29,8 @@
 
                     <Template src="skin:device/main/knob_small.xml">
                         <SetVariable name="ObjectName">Master</SetVariable>
-                        <SetVariable name="TooltipId">master_volume</SetVariable>
-                        <SetVariable name="ConfigKey">[Master],volume</SetVariable>
+                        <SetVariable name="TooltipId">main_gain</SetVariable>
+                        <SetVariable name="ConfigKey">[Master],gain</SetVariable>
                     </Template>
 
                     <Template src="skin:device/main/knob_small.xml">
@@ -61,35 +61,42 @@
                                         <Size>me,45f</Size>
                                         <Children>
 
-                                            <VuMeter>
-                                                <!-- <SizePolicy>min,max</SizePolicy> -->
-                                                <Size>me,22f</Size>
-                                                <TooltipId>master_VuMeterL</TooltipId>
-                                                <PathVu>background/bg_4_vu_left_on.svg</PathVu>
-                                                <Horizontal>true</Horizontal>
-                                                <PeakHoldSize>4</PeakHoldSize>
-                                                <PeakHoldTime>500</PeakHoldTime>
-                                                <PeakFallTime>50</PeakFallTime>
-                                                <PeakFallStep>2</PeakFallStep>
-                                                <Connection>
-                                                    <ConfigKey>[Master],VuMeterL</ConfigKey>
-                                                </Connection>
-                                            </VuMeter>
+                                            <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
                                             <VuMeter>
                                                 <!-- <SizePolicy>min,max</SizePolicy> -->
-                                                <Size>me,23f</Size>
-                                                <TooltipId>master_VuMeterR</TooltipId>
-                                                <PathVu>background/bg_4_vu_right_on.svg</PathVu>
+                                                <Size>me,5f</Size>
+                                                <TooltipId>main_VuMeterL</TooltipId>                                                <PathVu>background/bg_4_vu_left_on.png</PathVu>
                                                 <Horizontal>true</Horizontal>
                                                 <PeakHoldSize>4</PeakHoldSize>
                                                 <PeakHoldTime>500</PeakHoldTime>
                                                 <PeakFallTime>50</PeakFallTime>
                                                 <PeakFallStep>2</PeakFallStep>
                                                 <Connection>
-                                                    <ConfigKey>[Master],VuMeterR</ConfigKey>
+                                                    <ConfigKey>[Main],vu_meter_left</ConfigKey>
                                                 </Connection>
                                             </VuMeter>
+
+                                            <WidgetGroup>
+                                                <MinimumSize>-1,6</MinimumSize>
+                                                <MaximumSize>-1,6</MaximumSize>
+                                            </WidgetGroup>
+
+                                            <VuMeter>
+                                                <!-- <SizePolicy>min,max</SizePolicy> -->
+                                                <Size>me,5f</Size>
+                                                <TooltipId>main_VuMeterR</TooltipId>                                                <PathVu>background/bg_4_vu_right_on.png</PathVu>
+                                                <Horizontal>true</Horizontal>
+                                                <PeakHoldSize>4</PeakHoldSize>
+                                                <PeakHoldTime>500</PeakHoldTime>
+                                                <PeakFallTime>50</PeakFallTime>
+                                                <PeakFallStep>2</PeakFallStep>
+                                                <Connection>
+                                                    <ConfigKey>[Main],vu_meter_right</ConfigKey>
+                                                </Connection>
+                                            </VuMeter>
+
+                                            <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
                                         </Children>
                                     </WidgetGroup>
@@ -103,21 +110,21 @@
 
                                             <StatusLight>
                                                 <Size>13,22</Size>
-                                                <TooltipId>master_PeakIndicatorL</TooltipId>
+                                                <TooltipId>main_peak_indicator_left</TooltipId>
                                                 <PathStatusLight>background/bg_6_clipping_left_on.svg</PathStatusLight>
                                                 <PathBack>background/bg_6_clipping_left_off.svg</PathBack>
                                                 <Connection>
-                                                    <ConfigKey>[Master],PeakIndicatorL</ConfigKey>
+                                                    <ConfigKey>[Main],peak_indicator_left</ConfigKey>
                                                 </Connection>
                                             </StatusLight>
 
                                             <StatusLight>
                                                 <Size>13,23</Size>
-                                                <TooltipId>master_PeakIndicatorR</TooltipId>
+                                                <TooltipId>main_peak_indicator_right</TooltipId>
                                                 <PathStatusLight>background/bg_6_clipping_right_on.svg</PathStatusLight>
                                                 <PathBack>background/bg_6_clipping_right_off.svg</PathBack>
                                                 <Connection>
-                                                    <ConfigKey>[Master],PeakIndicatorR</ConfigKey>
+                                                    <ConfigKey>[Main],peak_indicator_right</ConfigKey>
                                                 </Connection>
                                             </StatusLight>
 
@@ -140,35 +147,42 @@
                                         <Size>me,45f</Size>
                                         <Children>
 
-                                            <VuMeter>
-                                                <!-- <SizePolicy>min,max</SizePolicy> -->
-                                                <Size>me,22f</Size>
-                                                <TooltipId>master_VuMeterL</TooltipId>
-                                                <PathVu>background/bg_4_vu_left_on.svg</PathVu>
-                                                <Horizontal>true</Horizontal>
-                                                <PeakHoldSize>4</PeakHoldSize>
-                                                <PeakHoldTime>500</PeakHoldTime>
-                                                <PeakFallTime>50</PeakFallTime>
-                                                <PeakFallStep>2</PeakFallStep>
-                                                <Connection>
-                                                    <ConfigKey>[Master],VuMeterL</ConfigKey>
-                                                </Connection>
-                                            </VuMeter>
+                                            <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
                                             <VuMeter>
                                                 <!-- <SizePolicy>min,max</SizePolicy> -->
-                                                <Size>me,23f</Size>
-                                                <TooltipId>master_VuMeterR</TooltipId>
-                                                <PathVu>background/bg_4_vu_right_on.svg</PathVu>
+                                                <Size>me,5f</Size>
+                                                <TooltipId>main_VuMeterL</TooltipId>                                                <PathVu>background/bg_4_vu_left_on.png</PathVu>
                                                 <Horizontal>true</Horizontal>
                                                 <PeakHoldSize>4</PeakHoldSize>
                                                 <PeakHoldTime>500</PeakHoldTime>
                                                 <PeakFallTime>50</PeakFallTime>
                                                 <PeakFallStep>2</PeakFallStep>
                                                 <Connection>
-                                                    <ConfigKey>[Master],VuMeterR</ConfigKey>
+                                                    <ConfigKey>[Main],vu_meter_left</ConfigKey>
                                                 </Connection>
                                             </VuMeter>
+
+                                            <WidgetGroup>
+                                                <MinimumSize>-1,6</MinimumSize>
+                                                <MaximumSize>-1,6</MaximumSize>
+                                            </WidgetGroup>
+
+                                            <VuMeter>
+                                                <!-- <SizePolicy>min,max</SizePolicy> -->
+                                                <Size>me,5f</Size>
+                                                <TooltipId>main_VuMeterR</TooltipId>                                                <PathVu>background/bg_4_vu_right_on.png</PathVu>
+                                                <Horizontal>true</Horizontal>
+                                                <PeakHoldSize>4</PeakHoldSize>
+                                                <PeakHoldTime>500</PeakHoldTime>
+                                                <PeakFallTime>50</PeakFallTime>
+                                                <PeakFallStep>2</PeakFallStep>
+                                                <Connection>
+                                                    <ConfigKey>[Main],vu_meter_right</ConfigKey>
+                                                </Connection>
+                                            </VuMeter>
+
+                                            <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
                                         </Children>
                                     </WidgetGroup>
@@ -182,21 +196,21 @@
 
                                             <StatusLight>
                                                 <Size>23,22</Size>
-                                                <TooltipId>master_PeakIndicatorL</TooltipId>
+                                                <TooltipId>main_peak_indicator_left</TooltipId>
                                                 <PathStatusLight>background/bg_5_clipping_left_on.svg</PathStatusLight>
                                                 <PathBack>background/bg_5_clipping_left_off.svg</PathBack>
                                                 <Connection>
-                                                    <ConfigKey>[Master],PeakIndicatorL</ConfigKey>
+                                                    <ConfigKey>[Main],peak_indicator_left</ConfigKey>
                                                 </Connection>
                                             </StatusLight>
 
                                             <StatusLight>
                                                 <Size>23,23</Size>
-                                                <TooltipId>master_PeakIndicatorR</TooltipId>
+                                                <TooltipId>main_peak_indicator_right</TooltipId>
                                                 <PathStatusLight>background/bg_5_clipping_right_on.svg</PathStatusLight>
                                                 <PathBack>background/bg_5_clipping_right_off.svg</PathBack>
                                                 <Connection>
-                                                    <ConfigKey>[Master],PeakIndicatorR</ConfigKey>
+                                                    <ConfigKey>[Main],peak_indicator_right</ConfigKey>
                                                 </Connection>
                                             </StatusLight>
 
@@ -219,35 +233,42 @@
                                         <Size>me,45f</Size>
                                         <Children>
 
-                                            <VuMeter>
-                                                <!-- <SizePolicy>min,max</SizePolicy> -->
-                                                <Size>me,22f</Size>
-                                                <TooltipId>master_VuMeterL</TooltipId>
-                                                <PathVu>background/bg_4_vu_left_on.svg</PathVu>
-                                                <Horizontal>true</Horizontal>
-                                                <PeakHoldSize>4</PeakHoldSize>
-                                                <PeakHoldTime>500</PeakHoldTime>
-                                                <PeakFallTime>50</PeakFallTime>
-                                                <PeakFallStep>2</PeakFallStep>
-                                                <Connection>
-                                                    <ConfigKey>[Master],VuMeterL</ConfigKey>
-                                                </Connection>
-                                            </VuMeter>
+                                            <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
                                             <VuMeter>
                                                 <!-- <SizePolicy>min,max</SizePolicy> -->
-                                                <Size>me,23f</Size>
-                                                <TooltipId>master_VuMeterR</TooltipId>
-                                                <PathVu>background/bg_4_vu_right_on.svg</PathVu>
+                                                <Size>me,5f</Size>
+                                                <TooltipId>main_VuMeterL</TooltipId>                                                <PathVu>background/bg_4_vu_left_on.png</PathVu>
                                                 <Horizontal>true</Horizontal>
                                                 <PeakHoldSize>4</PeakHoldSize>
                                                 <PeakHoldTime>500</PeakHoldTime>
                                                 <PeakFallTime>50</PeakFallTime>
                                                 <PeakFallStep>2</PeakFallStep>
                                                 <Connection>
-                                                    <ConfigKey>[Master],VuMeterR</ConfigKey>
+                                                    <ConfigKey>[Main],vu_meter_left</ConfigKey>
                                                 </Connection>
                                             </VuMeter>
+
+                                            <WidgetGroup>
+                                                <MinimumSize>-1,6</MinimumSize>
+                                                <MaximumSize>-1,6</MaximumSize>
+                                            </WidgetGroup>
+
+                                            <VuMeter>
+                                                <!-- <SizePolicy>min,max</SizePolicy> -->
+                                                <Size>me,5f</Size>
+                                                <TooltipId>main_VuMeterR</TooltipId>                                                <PathVu>background/bg_4_vu_right_on.png</PathVu>
+                                                <Horizontal>true</Horizontal>
+                                                <PeakHoldSize>4</PeakHoldSize>
+                                                <PeakHoldTime>500</PeakHoldTime>
+                                                <PeakFallTime>50</PeakFallTime>
+                                                <PeakFallStep>2</PeakFallStep>
+                                                <Connection>
+                                                    <ConfigKey>[Main],vu_meter_right</ConfigKey>
+                                                </Connection>
+                                            </VuMeter>
+
+                                            <WidgetGroup><SizePolicy>me,me</SizePolicy></WidgetGroup>
 
                                         </Children>
                                     </WidgetGroup>
@@ -261,21 +282,21 @@
 
                                             <StatusLight>
                                                 <Size>33,22</Size>
-                                                <TooltipId>master_PeakIndicatorL</TooltipId>
+                                                <TooltipId>main_peak_indicator_left</TooltipId>
                                                 <PathStatusLight>background/bg_4_clipping_left_on.svg</PathStatusLight>
                                                 <PathBack>background/bg_4_clipping_left_off.svg</PathBack>
                                                 <Connection>
-                                                    <ConfigKey>[Master],PeakIndicatorL</ConfigKey>
+                                                    <ConfigKey>[Main],peak_indicator_left</ConfigKey>
                                                 </Connection>
                                             </StatusLight>
 
                                             <StatusLight>
                                                 <Size>33,23</Size>
-                                                <TooltipId>master_PeakIndicatorR</TooltipId>
+                                                <TooltipId>main_peak_indicator_right</TooltipId>
                                                 <PathStatusLight>background/bg_4_clipping_right_on.svg</PathStatusLight>
                                                 <PathBack>background/bg_4_clipping_right_off.svg</PathBack>
                                                 <Connection>
-                                                    <ConfigKey>[Master],PeakIndicatorR</ConfigKey>
+                                                    <ConfigKey>[Main],peak_indicator_right</ConfigKey>
                                                 </Connection>
                                             </StatusLight>
 

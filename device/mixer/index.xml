@@ -125,7 +125,7 @@
                             <WidgetGroup>
                                 <ObjectName>Rectangle</ObjectName>
                                 <Layout>horizontal</Layout>
-                                <SizePolicy>me,me</SizePolicy>
+                                <SizePolicy>me,max</SizePolicy>
                                 <Children>
 
                                     <!--

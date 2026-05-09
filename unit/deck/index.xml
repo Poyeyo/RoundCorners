@@ -7,7 +7,7 @@
     **************************************************************************************
     -->
     <WidgetGroup>
-        <ObjectName>Row</ObjectName>
+        <ObjectName>DeckMixerRow</ObjectName>
         <Layout>horizontal</Layout>
         <SizePolicy>me,max</SizePolicy>
         <Children>
@@ -22,6 +22,7 @@
                 <SetVariable name="Widget"><Variable name="Widget1"/></SetVariable>
                 <SetVariable name="Group"><Variable name="Group1"/></SetVariable>
                 <SetVariable name="Align"><Variable name="Align1"/></SetVariable>
+                <SetVariable name="MixerWidget"><Variable name="Widget3"/></SetVariable>
                 <SetVariable name="SignalHighColor"><Variable name="SignalHighColor1"/></SetVariable>
                 <SetVariable name="SignalMidColor"><Variable name="SignalMidColor1"/></SetVariable>
                 <SetVariable name="SignalLowColor"><Variable name="SignalLowColor1"/></SetVariable>
@@ -34,10 +35,22 @@
                 <MaximumSize>2,-1</MaximumSize>
             </WidgetGroup>
 
-            <Template src="skin:device/mixer/index.xml">
-                <SetVariable name="Number"><Variable name="Number3"/></SetVariable>
-                <SetVariable name="Widget"><Variable name="Widget3"/></SetVariable>
-            </Template>
+            <WidgetGroup><!-- mixer slot: hide entire slot so hidden mixer cannot reserve row height -->
+                <Layout>horizontal</Layout>
+                <SizePolicy>min,min</SizePolicy>
+                <Children>
+
+                    <Template src="skin:device/mixer/index.xml">
+                        <SetVariable name="Number"><Variable name="Number3"/></SetVariable>
+                        <SetVariable name="Widget"><Variable name="Widget3"/></SetVariable>
+                    </Template>
+
+                </Children>
+                <Connection>
+                    <ConfigKey persist="true"><Variable name="Widget3"/>,show_mixer</ConfigKey>
+                    <BindProperty>visible</BindProperty>
+                </Connection>
+            </WidgetGroup>
 
             <WidgetGroup><!-- margin-left -->
                 <MinimumSize>2,-1</MinimumSize>
@@ -49,6 +62,7 @@
                 <SetVariable name="Widget"><Variable name="Widget2"/></SetVariable>
                 <SetVariable name="Group"><Variable name="Group2"/></SetVariable>
                 <SetVariable name="Align"><Variable name="Align2"/></SetVariable>
+                <SetVariable name="MixerWidget"><Variable name="Widget3"/></SetVariable>
                 <SetVariable name="SignalHighColor"><Variable name="SignalHighColor2"/></SetVariable>
                 <SetVariable name="SignalMidColor"><Variable name="SignalMidColor2"/></SetVariable>
                 <SetVariable name="SignalLowColor"><Variable name="SignalLowColor2"/></SetVariable>

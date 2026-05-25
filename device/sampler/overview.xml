@@ -6,8 +6,50 @@
     OVERVIEW BEGIN
     **************************************************************************************
     -->
-    <Template src="skin:shared/overview.xml"/>
-    <Template src="skin:shared/overview_advanced.xml"/>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size><Variable name="Size"/></Size>
+        <Children>
+
+            <WidgetGroup>
+                <Layout>stacked</Layout>
+                <Size><Variable name="Size"/></Size>
+                <Children>
+                    <Template src="skin:shared/overview.xml">
+                        <SetVariable name="PlayedOverlayColor">#c8121212</SetVariable>
+                    </Template>
+                    <Template src="skin:shared/overview_advanced.xml">
+                        <SetVariable name="PlayedOverlayColor">#c8121212</SetVariable>
+                    </Template>
+                </Children>
+                <Connection>
+                    <ConfigKey><Variable name="Group"/>,play_latched</ConfigKey>
+                    <BindProperty>visible</BindProperty>
+                </Connection>
+            </WidgetGroup>
+
+            <WidgetGroup>
+                <Layout>stacked</Layout>
+                <Size><Variable name="Size"/></Size>
+                <Children>
+                    <Template src="skin:shared/overview.xml">
+                        <SetVariable name="PlayedOverlayColor">#00121212</SetVariable>
+                    </Template>
+                    <Template src="skin:shared/overview_advanced.xml">
+                        <SetVariable name="PlayedOverlayColor">#00121212</SetVariable>
+                    </Template>
+                </Children>
+                <Connection>
+                    <ConfigKey><Variable name="Group"/>,play_latched</ConfigKey>
+                    <Transform>
+                        <Not/>
+                    </Transform>
+                    <BindProperty>visible</BindProperty>
+                </Connection>
+            </WidgetGroup>
+
+        </Children>
+    </WidgetGroup>
     <!--
     **************************************************************************************
     OVERVIEW END

@@ -16,6 +16,7 @@
 
             <PushButton>
                 <ObjectName>Btn-br</ObjectName>
+                <TooltipId>cue_gotoandplay_cue_default</TooltipId>
                 <Size>25me,45f</Size>
                 <NumberStates>2</NumberStates>
                 <RightClickIsPushButton>true</RightClickIsPushButton>
@@ -28,14 +29,20 @@
                     <Text>▶/||</Text>
                 </State>
                 <Connection>
-                    <ConfigKey><Variable name="Group"/>,play</ConfigKey>
+                    <ConfigKey><Variable name="Group"/>,cue_gotoandplay</ConfigKey>
                     <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                     <ButtonState>LeftButton</ButtonState>
+                    <ConnectValueToWidget>false</ConnectValueToWidget>
                 </Connection>
                 <Connection>
-                    <ConfigKey><Variable name="Group"/>,cue_set</ConfigKey>
+                    <ConfigKey><Variable name="Group"/>,cue_default</ConfigKey>
                     <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
                     <ButtonState>RightButton</ButtonState>
+                    <ConnectValueToWidget>false</ConnectValueToWidget>
+                </Connection>
+                <Connection>
+                    <ConfigKey><Variable name="Group"/>,play_latched</ConfigKey>
+                    <ConnectValueFromWidget>false</ConnectValueFromWidget>
                 </Connection>
             </PushButton>
 

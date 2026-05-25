@@ -1,6 +1,8 @@
 <!DOCTYPE template>
 <Template>
 
-    <Template src="skin:shared/overview.xml"/>
+    <Template src="skin:shared/overview.xml">
+        <SetVariable name="PlayedOverlayColor">#c8121212</SetVariable>
+    </Template>
 
 </Template>

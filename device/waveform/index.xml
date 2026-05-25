@@ -9,9 +9,9 @@
     <WidgetGroup>
         <ObjectName>Row</ObjectName>
         <Layout>horizontal</Layout>
-        <MinimumSize>-1,244</MinimumSize>
-        <MaximumSize>-1,244</MaximumSize>
-        <SizePolicy>me,f</SizePolicy>
+        <MinimumSize>-1,72</MinimumSize>
+        <MaximumSize>-1,344</MaximumSize>
+        <SizePolicy>me,me</SizePolicy>
         <Children>
 
             <WidgetGroup><!-- margin-left -->
@@ -38,9 +38,9 @@
                             <WidgetGroup>
                                 <ObjectName>Rectangle</ObjectName>
                                 <Layout>horizontal</Layout>
-                                <MinimumSize>-1,220</MinimumSize>
-                                <MaximumSize>-1,220</MaximumSize>
-                                <SizePolicy>me,f</SizePolicy>
+                                <MinimumSize>-1,48</MinimumSize>
+                                <MaximumSize>-1,320</MaximumSize>
+                                <SizePolicy>me,me</SizePolicy>
                                 <Children>
 
                                     <WidgetGroup><!-- margin-left -->

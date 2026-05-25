@@ -54,6 +54,16 @@ QToolTip {
 }
 
 #Body { background-color: #000000; font-family: 'Open Sans'; font-weight: normal; }
+#WaveformSplitter {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+#WaveformSplitter::handle:vertical {
+    height: 4px;
+    background-color: #000000;
+    image: none;
+}
 #BorderTop { border: 0; border-top-right-radius: 8px; border-top-left-radius: 8px; background-color: #121212; margin: 2px 0 0 0; }
 #PreviewDeck { max-height: 100px; min-height: 60px; }
 #PreviewDeck #BorderTop { margin: 3px 0 0 0; }

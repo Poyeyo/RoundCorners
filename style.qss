@@ -417,6 +417,7 @@ QTableView::indicator:unchecked {
  */
 #DlgMissing > QPushButton,
 #DlgHidden > QPushButton,
+#DlgAutoDJ > #LibraryFeatureControls QPushButton,
 #DlgAutoDJ > QPushButton,
 #DlgRecording > QPushButton,
 #DlgAnalysis > QPushButton {
@@ -433,6 +434,7 @@ QTableView::indicator:unchecked {
 
 #DlgMissing > QPushButton:!enabled,
 #DlgHidden > QPushButton:!enabled,
+#DlgAutoDJ > #LibraryFeatureControls QPushButton:!enabled,
 #DlgAutoDJ > QPushButton:!enabled,
 #DlgRecording > QPushButton:!enabled,
 #DlgAnalysis > QPushButton:!enabled {
@@ -442,6 +444,7 @@ QTableView::indicator:unchecked {
 
 #DlgMissing > QPushButton:hover,
 #DlgHidden > QPushButton:hover,
+#DlgAutoDJ > #LibraryFeatureControls QPushButton:hover,
 #DlgAutoDJ > QPushButton:hover,
 #DlgAutoDJ > QSpinBox::up-button:hover,
 #DlgAutoDJ > QSpinBox::down-button:hover,
@@ -452,6 +455,7 @@ QTableView::indicator:unchecked {
 
 #DlgMissing > QPushButton:checked,
 #DlgHidden > QPushButton:checked,
+#DlgAutoDJ > #LibraryFeatureControls QPushButton:checked,
 #DlgAutoDJ > QPushButton:checked,
 #DlgRecording > QPushButton:checked,
 #DlgAnalysis > QPushButton:checked {
@@ -460,6 +464,7 @@ QTableView::indicator:unchecked {
 
 #DlgMissing > QPushButton:checked:hover,
 #DlgHidden > QPushButton:checked:hover,
+#DlgAutoDJ > #LibraryFeatureControls QPushButton:checked:hover,
 #DlgAutoDJ > QPushButton:checked:hover,
 #DlgRecording > QPushButton:checked:hover,
 #DlgAnalysis > QPushButton:checked:hover {
@@ -494,47 +499,106 @@ QTableView::indicator:unchecked {
 /**
  * dlgautodj.ui
  */
-#DlgAutoDJ > QPushButton#pushButtonShuffle {
-    margin: 2px 1px 13px 10px;
+#DlgAutoDJ #LibraryFeatureControls QPushButton {
+    min-height: 34px;
+    max-height: 34px;
+    height: 34px;
+    padding: 0 20px;
+    margin: 0 1px 8px 0;
+    border: 0;
+    border-radius: 0;
+    background-color: #484848;
+    color: #000000;
+    font-size: 13px;
+    outline: none;
+}
+
+#DlgAutoDJ QPushButton#pushButtonAutoDJ {
+    margin: 0 10px 8px 0;
+    border-radius: 5px;
+}
+
+#DlgAutoDJ QPushButton#pushButtonFadeNow {
+    margin-left: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-#DlgAutoDJ > QPushButton#pushButtonAddRandom {
-    margin: 2px 1px 13px 0;
-}
-
-#DlgAutoDJ > QPushButton#pushButtonSkipNext {
-    margin: 2px 1px 13px 0;
-}
-
-#DlgAutoDJ > QPushButton#pushButtonFadeNow {
-    margin: 2px 1px 13px 0;
+#DlgAutoDJ QPushButton#pushButtonSkipNext {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-#DlgAutoDJ > QSpinBox#spinBoxTransition {
-    min-height: 45px;
-    margin: 2px 0 13px 10px;
-    padding: 0 20px;
-    font-size: 13px;
-    color: #000000;
-    background-color: #484848;
+#DlgAutoDJ QPushButton#pushButtonShuffle {
+    margin-left: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-#DlgAutoDJ > QSpinBox#spinBoxTransition:editable {
+#DlgAutoDJ QPushButton#pushButtonAddRandom,
+#DlgAutoDJ QPushButton#pushButtonAddRandomTrack {
+    border-radius: 0;
+}
+
+#DlgAutoDJ QPushButton#pushButtonRepeatPlaylist {
+    margin-right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#DlgAutoDJ #fadeModeCombobox {
+    min-height: 34px;
+    max-height: 34px;
+    height: 34px;
+    min-width: 160px;
+    margin: 0 0 8px 10px;
+    padding: 0 24px 0 8px;
+    font-size: 13px;
+    color: #c6c6c6;
+    background-color: #484848;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+#DlgAutoDJ #fadeModeCombobox::drop-down {
+    width: 20px;
+    border: 0;
+}
+
+#DlgAutoDJ #fadeModeCombobox::down-arrow {
+    image: url(skin:/style/arrow_down.svg);
+    width: 7px;
+    height: 7px;
+}
+
+#DlgAutoDJ > QSpinBox#spinBoxTransition,
+#DlgAutoDJ #LibraryFeatureControls QSpinBox#spinBoxTransition {
+    min-height: 34px;
+    max-height: 34px;
+    height: 34px;
+    margin: 0 0 8px 1px;
+    padding: 0 20px;
+    font-size: 13px;
+    color: #000000;
+    background-color: #484848;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+
+#DlgAutoDJ > QSpinBox#spinBoxTransition:editable,
+#DlgAutoDJ #LibraryFeatureControls QSpinBox#spinBoxTransition:editable {
     background: transparent;
     color: #000000;
 }
 
-#DlgAutoDJ > QSpinBox#spinBoxTransition::up-button {
+#DlgAutoDJ > QSpinBox#spinBoxTransition::up-button,
+#DlgAutoDJ #LibraryFeatureControls QSpinBox#spinBoxTransition::up-button {
     padding: 0;
     margin: 0;
     width: 22px;
-    height: 23px;
+    height: 17px;
     border: 0;
     border-left: 1px solid #121212;
     border-right: 1px solid #121212;
@@ -542,17 +606,18 @@ QTableView::indicator:unchecked {
     outline: none;
 }
 
-#DlgAutoDJ > QSpinBox::up-arrow {
+#DlgAutoDJ QSpinBox::up-arrow {
     image: url(skin:/style/arrow_up.svg);
     width: 7px;
     height: 7px;
 }
 
-#DlgAutoDJ > QSpinBox#spinBoxTransition::down-button {
+#DlgAutoDJ > QSpinBox#spinBoxTransition::down-button,
+#DlgAutoDJ #LibraryFeatureControls QSpinBox#spinBoxTransition::down-button {
     padding: 0;
     margin: 0;
     width: 22px;
-    height: 22px;
+    height: 17px;
     border: 0;
     border-top: 0 solid #121212;
     border-left: 1px solid #121212;
@@ -560,25 +625,25 @@ QTableView::indicator:unchecked {
     outline: none;
 }
 
-#DlgAutoDJ > QSpinBox::down-arrow {
+#DlgAutoDJ QSpinBox::down-arrow {
     image: url(skin:/style/arrow_down.svg);
     width: 7px;
     height: 7px;
 }
 
-#DlgAutoDJ > QLabel#labelTransitionAppendix {
-    margin: 2px 0 13px 0;
-    padding: 0 20px 0 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+#DlgAutoDJ > QLabel#labelTransitionAppendix,
+#DlgAutoDJ #LibraryFeatureControls QLabel#labelTransitionAppendix {
+    min-height: 34px;
+    max-height: 34px;
+    height: 34px;
+    margin: 0 10px 8px 3px;
+    padding: 0;
+    color: #c6c6c6;
+    background: transparent;
+    border: 0;
 }
 
 #DlgAutoDJ > QLabel#labelSelectionInfo {
-    margin: 2px 10px 13px 0;
-    border-radius: 5px;
-}
-
-#DlgAutoDJ > QPushButton#pushButtonAutoDJ {
     margin: 2px 10px 13px 0;
     border-radius: 5px;
 }
@@ -795,6 +860,7 @@ QScrollBar::sub-page:vertical {
 #Main #RecordingDuration,
 #Deck1 #Time,
 #Deck1 #Duration,
+#Deck1 #Year,
 #Deck1 #SyncMode {
     color: #d4ddd7;
     font-size: 16px;
@@ -811,6 +877,7 @@ QScrollBar::sub-page:vertical {
 #Deck2 #VisualBpm,
 #Deck2 #Time,
 #Deck2 #Duration,
+#Deck2 #Year,
 #Deck2 #SyncMode {
     color: #9ab0b5;
     font-size: 16px;
@@ -827,6 +894,7 @@ QScrollBar::sub-page:vertical {
 #Deck3 #VisualBpm,
 #Deck3 #Time,
 #Deck3 #Duration,
+#Deck3 #Year,
 #Deck3 #SyncMode {
     color: #918b74;
     font-size: 16px;
@@ -844,6 +912,7 @@ QScrollBar::sub-page:vertical {
 #Deck4 #VisualBpm,
 #Deck4 #Time,
 #Deck4 #Duration,
+#Deck4 #Year,
 #Deck4 #SyncMode {
     color: #776a54;
     font-size: 16px;

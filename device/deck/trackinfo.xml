@@ -110,6 +110,35 @@
 
             <WidgetGroup>
                 <Layout>vertical</Layout>
+                <Size>90f,36f</Size>
+                <Children>
+
+                    <TrackProperty>
+                        <ObjectName>Year</ObjectName>
+                        <TooltipId></TooltipId>
+                        <Alignment>center</Alignment>
+                        <Size>90f,18f</Size>
+                        <Property>year</Property>
+                        <Channel><Variable name="Number"/></Channel>
+                    </TrackProperty>
+
+                    <StarRating>
+                        <ObjectName>DeckStars</ObjectName>
+                        <TooltipId>starrating</TooltipId>
+                        <Size>90f,18f</Size>
+                        <Channel><Variable name="Number"/></Channel>
+                    </StarRating>
+
+                </Children>
+            </WidgetGroup>
+
+            <WidgetGroup><!-- spacer -->
+                <Layout>horizontal</Layout>
+                <Size>10f,36f</Size>
+            </WidgetGroup>
+
+            <WidgetGroup>
+                <Layout>vertical</Layout>
                 <SizePolicy>me,f</SizePolicy>
                 <MinimumSize>80,36</MinimumSize>
                 <MaximumSize>110,36</MaximumSize>
